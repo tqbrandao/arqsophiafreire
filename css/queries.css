@@ -1,0 +1,244 @@
+/*   IMPORTANTISSO: REM e EM nao dependem do font-size do HTML nos MEDIAS QUERIES (ou seja, nao respondem as 62.5% que especificamos no font-size do HTML. Ao inves disso, 1rem = 1em = 16px */
+
+/* rem = root font-size    /    em = current font-size */
+
+/* REM tem alguns bugs em browsers quando usados em media queries, portanto usaremos em ao inves do rem */
+
+/* ****************************************
+    ABAIXO DE 1344 PX (DESKTOPS PEQUENOS)
+**************************************** */
+
+@media (max-width: 84em) {
+  /* Escolhemos o valor de 1350 e dividimos por 16 px (valor unitario do em e rem) e arredondamos */
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/* ****************************************
+    ABAIXO DE 1200 PX (TABLETS EM PAISAGEM)
+**************************************** */
+
+@media (max-width: 75em) {
+  html {
+    /* font-size: 9px; */
+    /* 9px / 16px = 0.5625 = 56.25% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+}
+
+/* ****************************************
+    ABAIXO DE 944 PX (TABLETS)
+**************************************** */
+@media (max-width: 59em) {
+  html {
+    /* font-size: 8px; */
+    /* 8px / 16px = 0.5 = 50.00% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 50%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* ****************************************
+    ABAIXO DE 752 PX
+**************************************** */
+@media (max-width: 47em) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 4.8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 70%;
+  }
+
+  /* NAVEGACAO MOBILE */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgb(255, 255, 255, 0.9);
+    /* Usando o WEBKIT pra fazer funcionar no navegador safari */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* No caso, 100 viewport height units */
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Esconder a navigation */
+
+    /* Poderia usar display = none porem, quando usamos essa tecnica nao da pra colocar animacoes ou transicoes no elemento */
+
+    /* 1) Esconder o elemento visualmente */
+    opacity: 0;
+
+    /* 2) Fazer o elemento inacessivel para o mouse e teclado */
+    pointer-events: none;
+
+    /* 3) Esconder o elemento de screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/* ****************************************
+    ABAIXO DE 544 PX (CELULARES)
+**************************************** */
+
+@media (max-width: 34em) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 3.2rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* ****************************************
+    CONSERTANDO O FLEXBOX GAP DO SAFARI
+**************************************** */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
