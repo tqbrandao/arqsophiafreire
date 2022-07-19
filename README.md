@@ -6,7 +6,7 @@ Website responsivo com personalidade minimalista e serena, estilo clean e modern
 
 ## Seções 📚
 
-✔️ Sobre mim
-✔️ Portfólio
-✔️ Comentários
-✔️ Contato
+✔️ Sobre mim  
+✔️ Portfólio  
+✔️ Comentários  
+✔️ Contato  
