@@ -14,28 +14,42 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
+
+/*
+allLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // e.preventDefault();
     const href = link.getAttribute("href");
 
     // Scroll voltando pro topo
-    if (href === "#")
+    if (href === "#") {
+      e.preventDefault();
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
+    }
 
     // Scroll para outros links
-    if (!href !== "#" && href.startsWith("#")) {
+    if (href !== "#" && href.startsWith("#")) {
+      e.preventDefault();
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
     // Fechar navegacao mobile
-    if (link.classList.contains("main-nav-link"))
+    if (link.classList.contains("main-nav-link")) {
+      e.preventDefault();
       headerEl.classList.toggle("nav-open");
+    }
   });
 });
-
+*/
 // ------------ NAVEGACAO STICKY ----------------
 
 const sectionHeroEl = document.querySelector(".section-hero");
