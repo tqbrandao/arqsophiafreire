@@ -137,7 +137,7 @@
 **************************************** */
 
 .section-gallery {
-  padding: 6.4rem 0 9.6rem 0;
+  padding: 6.4rem 0 4.8rem 0;
 }
 
 .gallery-container {
@@ -151,6 +151,29 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 1.6rem;
+}
+
+.gallery--button {
+  text-align: center;
+  margin-top: 2.8rem;
+}
+
+.btn--gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BUTOES DO SAIBA MAIS */
+
+.saiba--mais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saiba--mais-span {
+  margin-left: 1.8rem;
 }
 
 .gallery-item {
@@ -276,6 +299,7 @@
 .social-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 2.4rem;
   margin-bottom: 1.2rem;
 }
