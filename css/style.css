@@ -84,10 +84,24 @@
   background-color: rgb(255, 255, 255, 0.97);
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  /* transition: all 0.3s ease-in; */
+  animation: smooth-entrance 0.7s ease-out;
 }
 
 .sticky .section-hero {
   margin-top: 9.6rem;
+}
+
+@keyframes smooth-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 /* ****************************************
