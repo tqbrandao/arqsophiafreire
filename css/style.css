@@ -132,8 +132,14 @@
   width: 100%;
 }
 
-.hero-btn-center {
-  /* text-align: center; */
+.hero--cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-span {
+  margin-left: 1.8rem;
 }
 
 /* ****************************************
