@@ -11,10 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #f8d8bd; */
-  background-color: #fdf2e9;
+  background-color: #f7e9e4;
 
-  color: #8a4c14;
+  /* color: #8a4c14; */
   height: 9.6rem;
   /* Settando a altura pq depois faremos essa header sticky */
   padding: 0 4.8rem;
@@ -48,7 +47,7 @@
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #e67e22;
+  color: #a72d66;
 }
 
 /* MOBILE */
@@ -108,7 +107,7 @@
 **************************************** */
 
 .section-hero {
-  background-color: #fdf2e9;
+  background-color: #f7e9e4;
   padding: 6.4rem 0 9.6rem 0;
 }
 
@@ -234,7 +233,7 @@
 **************************************** */
 
 .section-testimonials {
-  background-color: #fdf2e9;
+  background-color: #f7e9e4;
   padding: 6.4rem 0 9.6rem 0;
 
   /* display: grid;
@@ -278,7 +277,7 @@
 **************************************** */
 
 .footer {
-  padding: 8rem 0;
+  padding: 4rem 0;
   border-top: 1px solid #eee;
 }
 

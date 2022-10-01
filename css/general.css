@@ -1,3 +1,19 @@
+/*  -------   NOVAS CORES ----------
+
+PRINCIPAL ESCURA:
+cor1: #591c3e
+
+
+------------------------------------
+cor2:#e4b5a5
+tint1cor2: #f7e9e4;
+
+
+--------------------------------------
+cor3: #a72d66
+
+*/
+
 /*
 
 ----- 1 SISTEMA DE TIPOGRAFIA -----
@@ -22,21 +38,6 @@ Default: 1
 - Letter spacing
 -0.5px
 0.75px
-
------ 2 CORES  -----
-
--Primary:
-#e67e22;
--Tints:
-#fdf2e9;
--Shades:
--Accents:
--Greys: 
-#6f6f6f
-#555
-#333
-
------ 5 SHADOWS -----
 
 ----- 6 BORDER RADIUS -----
 
@@ -146,7 +147,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #cf711f;
+  color: #a72d66;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -168,13 +169,13 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #e67e22;
+  background-color: #591c3e;
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #cf711f;
+  background-color: #a72d66;
 }
 
 .btn--outline:link,
@@ -197,6 +198,6 @@ body {
 }
 
 *:focus {
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+  /* box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5); */
   outline: none !important;
 }
