@@ -211,6 +211,10 @@
     height: 5.8rem;
   }
 
+  .logo-col {
+    padding-right: 2rem;
+  }
+
   .footer-container {
     gap: 5rem;
     grid-template-columns: 1fr;
