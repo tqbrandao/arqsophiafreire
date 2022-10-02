@@ -203,7 +203,16 @@
     grid-template-columns: 1fr;
   }
 
-  footer .container {
+  /* footer .container {
+    grid-template-columns: 1fr;
+  } */
+
+  .logo-footer {
+    height: 5.8rem;
+  }
+
+  .footer-container {
+    gap: 5rem;
     grid-template-columns: 1fr;
   }
 }
